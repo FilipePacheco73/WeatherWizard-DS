@@ -9,8 +9,9 @@
 - [Directory Structure](#directory-structure)
 - [Files Description](#files-description)
 - [Project Workflow](#project-workflow)
-  - [1. Imports](#1-imports)
-  - [2. Dataset Generation](#2-dataset-generation)
+  - [0. Imports](#0-imports)
+  - [1. Collect](#1-collect)
+  - [2. Data Cleaning](#2-data-cleaning)
   - [3. Feature Engineering](#3-feature-engineering)
   - [4. Feature Split](#4-feature-split)
   - [5. Model Setup](#5-model-setup)
@@ -57,13 +58,17 @@ WeatherWizard-DS integrates several AWS components to deliver a weather predicti
 
 ## Project Workflow
 
-### 1. Imports
+### 0. Imports
 
 Imports necessary libraries and modules for data processing, model training, and interaction with AWS services.
 
-### 2. Dataset Generation
+### 1. Collect
 
-Generates a synthetic dataset with weather conditions and geographical coordinates. The dataset is used to train and evaluate the weather prediction model.
+Collect data from dynamo db to retrain de model according users feedback and right predictions.
+
+### 2. Data Cleaning
+
+Remove coluns not necessary from data users collecting and prepare the answers to feature engineering.
 
 ### 3. Feature Engineering
 
